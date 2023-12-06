@@ -28,15 +28,15 @@
   }
 }
 :root {
-  --theme-background: #f5f6fa;
+  --theme-background: #404040;
   --theme-color: #282828;
   /**
    * Root properties, typically colour declarations, but contains other things too.
    */
-  --color-primary: #00a6ed;
-  --color-secondary: #bf1ca9;
-  --color-positive: #5ad42f;
-  --color-negative: #d4372f;
+  --color-primary: #ff0066;
+  --color-secondary: #800033;
+  --color-positive: #ff9933;
+  --color-negative: #0099ff;
   --site-container-width: 90%;
   --site-content-max-width: 81.25em;
   --site-owl-spacing: 1rem;
@@ -67,6 +67,15 @@
   --clip-notch: 10%;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-background: #282828;
+    --theme-color: #e5e5e5;
+    --header-background: var(--theme-background);
+    --header-link-color: var(--theme-color);
+    --post-preview-background: rgba(255, 255, 255, 0.035);
+  }
+}
 @media all and (min-width: 48em) {
   .Site:not(.Site--home) .Site__main {
     --site-container-width: 75%;
